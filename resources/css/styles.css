@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Base Styles */
+
+html {
+	font-size: 18px;
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+body {
+	line-height: 1.2;
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.flex {
+	display: flex;
+}
+
+ /* Header Styles */
+
+
+/* Start Here Section */
+
+
+/* About School Section */
+
+
+/* Courses Section */
+
+
+/* Thesis Secton */
+
+
+ /* Footer Styles */
