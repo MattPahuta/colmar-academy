@@ -1,4 +1,9 @@
 /* Universal Styles */
+
+* {
+	box-sizing: border-box;
+}
+
 html {
   font-size: 18px;
 }
@@ -11,8 +16,10 @@ body {
 }
 
 .container {
-  max-width: 1050px;
+  /* max-width: 1050px; */
+	width: 1200px;
   margin: auto;
+	border: 1px solid black;
 }
 
 @media only screen and (max-width: 480px) {
@@ -27,25 +34,26 @@ h1 {
 }
 
 h2 {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 
 h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.45rem;
+  line-height: 1.4rem;
 }
 
 h4 {
-  font-size: 1.10rem;
+  font-size: 1.2rem;
+	line-height: 1.2rem;
   font-weight: 600;
 }
 
 p {
   font-weight: 400;
   font-size: .8rem;
-  line-height: 1.1rem;
+  line-height: 1.2rem;
 }
 
 span {
@@ -104,14 +112,14 @@ nav {
 }
 
 .desktop a:hover {
-  color: #808080;
+  color: #b5c0cc;
 	/* background-color: blue;
 	border-radius: 4px;
 	padding: 0.3rem; */
 }
 
 .desktop a:active {
-  color: #808080;
+  color: #b5c0cc;
 	text-decoration: underline;
 }
 
@@ -143,6 +151,7 @@ nav.mobile {
 .main-banner {
   background-color: #d9dbdd;
   margin: 0 auto;
+	max-width: 1200px;
 }
 
 .main-banner .container {
@@ -163,7 +172,7 @@ nav.mobile {
   width: 440px;
 }
 
-.tagline {
+.slogan {
   height: auto;
   padding-left: 20px;
   margin-right: 60px;
@@ -173,26 +182,26 @@ nav.mobile {
   flex-direction: column;
 }
 
-.tagline h3 {
+.slogan h3 {
   margin-top: 32px;
   margin-bottom: 32px;
 }
 
-.tagline a {
-  /* background-color: #383838; */
+.slogan a {
 	background-color: #3d3c3c;
   color: #fff;
   padding-top: 16px;
   padding-bottom: 16px;
   text-align: center;
   text-decoration: none;
+	border-radius: 5px;
 }
 
-.tagline a:hover {
+.slogan a:hover {
   background-color: #808080;
 }
 
-.tagline a:active {
+.slogan a:active {
   background-color: #808080;
 }
 
@@ -213,28 +222,28 @@ nav.mobile {
     width: 100%;
   }
 
-  .tagline {
+  .slogan {
     margin: 32px 24px;
     padding-left: 0px;
     align-items: center;
   }
 
-  .tagline a {
+  .slogan a {
     width: 50%;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .tagline a {
+  .slogan a {
     width: 100%;
     background-color: #808080;
   }
 
-  .tagline a:hover {
+  .slogan a:hover {
     opacity: .7;
   }
 
-  .tagline a:active {
+  .slogan a:active {
     opacity: .7;
   }
 }
@@ -256,7 +265,8 @@ nav.mobile {
 }
 
 .content {
-  padding: 16px 1px 16px 0px;
+  /* padding: 16px 0px 16px 3px; */
+	padding: 16px 5px 16px 5px;
   width: 100%;
 }
 
@@ -367,10 +377,11 @@ nav.mobile {
 /* Start Learning and Courses Styles */
 
 .learning {
+	/* width: 1200px; */
 	background-color: #d9dbdd;
   padding-bottom: 32px;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .headline {
@@ -381,26 +392,43 @@ nav.mobile {
   padding-bottom: 32px;
 }
 
-.courses-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.courses-grid-container {
+	/* width: 100%; */
+	display: flex;
+	justify-content: center;
+  /* align-items: center;
   flex-wrap: wrap;
-  flex-direction: row;
-  width: 80%;
-  margin: 0 auto;
+  flex-direction: row; */
+  /* width: 80%; */
+  /* margin: 0 auto; */
+	/* margin: auto; */
+	/* padding-left: 72px;
+	padding-right: 72px; */
 }
 
-.courses-list {
+.courses-grid {
+	width: 1200px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+}
+
+.courses-mobile {
   display: none;
 }
 
 .course {
-  background-color: white;
-  width: 32%;
-  height: 16rem;
-  margin-bottom: 20px;
-	overflow: hidden;
+	background-color: white;
+  /* width: 32%; */
+	width: 300px;
+  /* height: 16rem; */
+	height: 350px;
+  margin-bottom: 32px;
+	margin-right: 32px;
+	/* overflow: hidden; */
 }
 
 .course img {
@@ -417,6 +445,8 @@ nav.mobile {
 
 .course-content {
   padding: 16px 16px 24px 16px;
+	/* display: flex;
+	flex-direction: column; */
 }
 
 .course-content span {
@@ -440,7 +470,7 @@ nav.mobile {
     display: none;
   }
 
-  .courses-list {
+  .courses-mobile {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -448,7 +478,7 @@ nav.mobile {
     padding-right: 16px;
   }
 
-.courses-list a {
+.courses-mobile a {
     background-color: #DCDCDC;
 	  color: #3d3c3c;
     text-decoration: none;
@@ -457,11 +487,11 @@ nav.mobile {
     font-size: 1.4rem;
   }
 
-  .courses-list a:hover {
+  .courses-mobile a:hover {
       background-color: #F5F5F5;
     }
 
-  .courses-list a:active {
+  .courses-mobile a:active {
       background-color: #F5F5F5;
     }
 }
@@ -480,7 +510,7 @@ nav.mobile {
 }
 
 .thesis p {
-  padding-top: 16px;
+  padding-top: 8px;
   padding-bottom: 0px;
 }
 
@@ -548,16 +578,16 @@ nav {
   padding-right: 16px;
 	color: #3d3c3c;
   font-size: .75rem;
-  cursor: auto;
   text-decoration: none;
 }
 
 .footer-nav a:hover {
-  color: #808080;
+  color: #b5c0cc;
+	text-decoration: underline;
 }
 
 .footer-nav a:active {
-  color: #808080;
+  color: #b5c0cc;
 }
 
 @media only screen and (max-width: 480px) {
