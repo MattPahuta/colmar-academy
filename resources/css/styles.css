@@ -430,6 +430,19 @@ header .container {
   padding: 16px 16px 24px 16px;
 }
 
+.course-content a {
+  text-decoration: none;
+  color: #3d3c3c;
+}
+
+.course-content a:hover {
+  color: #a2aec4;
+}
+
+.course-content a:active {
+  color: #a2aec4;
+}
+
 .course-content span {
   font-size: 0.9rem;
   color: #696969;
